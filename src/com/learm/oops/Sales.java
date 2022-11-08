@@ -8,6 +8,7 @@ public class Sales extends Employee {
 		Sales vivek=new Sales();
 		vivek.insentive=30000;
 		vivek.totalsalary(vivek.basesalary, vivek.bonus,vivek.insentive);
+		vivek.working();
 	}
 
 }

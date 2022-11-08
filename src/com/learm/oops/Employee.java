@@ -9,5 +9,8 @@ public class Employee{
 		Integer total=bs+bonus+insentive;
 		System.out.println(total);
 	}
+	public void working() {
+		System.out.println("Empolyee is working");
+	}
 }
 
