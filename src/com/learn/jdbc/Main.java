@@ -34,6 +34,7 @@ public class Main {
 		    	
 		    }
 		    else if(choice==3) {
+		    	StudentDao.showAllStudent();
 		    	
 		    }
 		    else if(choice==4) {

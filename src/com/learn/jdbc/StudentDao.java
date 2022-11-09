@@ -2,6 +2,8 @@ package com.learn.jdbc;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class StudentDao {
 	
@@ -33,6 +35,30 @@ public class StudentDao {
 		 int cnt=pstm.executeUpdate();
 		 if(cnt!=0)
 			 System.out.println("successful");
+	 }
+	 catch(Exception e){
+		 e.printStackTrace();
+		 
+	 }
+	 
+ }
+ public static void showAllStudent() {
+	 try {
+		 Connection con= DBconnection.createc();
+		 String query="select * from student";
+		 Statement stmt=con.createStatement();
+		 ResultSet set=stmt.executeQuery(query);
+		 while(set.next()) {
+			 int id=set.getInt(1);
+			 String name=set.getString(2);
+			 String phone=set.getString(3);
+			 String city=set.getString(4);
+			 System.out.println("ID:"+id);
+			 System.out.println("Student name:"+name);
+			 System.out.println("Student Phone:"+phone);
+			 System.out.println("City:"+city);
+			 }
+		
 	 }
 	 catch(Exception e){
 		 e.printStackTrace();
