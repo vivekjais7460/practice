@@ -24,9 +24,13 @@ public class Main {
 		    	String city=br.readLine();
 		    	Student st=new Student(name,phone,city);
 		    	System.out.println(st);
+		    	StudentDao.addStudent(st);
 		          
 		    }
 		    else if(choice==2) {
+		    	System.out.println("Enter student Id to be deleted");
+		    	int studentid=Integer.parseInt(br.readLine());
+		    	StudentDao.deleteStudent(studentid);
 		    	
 		    }
 		    else if(choice==3) {
